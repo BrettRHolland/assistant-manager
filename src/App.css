@@ -1,32 +1,145 @@
-.App {
-  text-align: center;
+.container {
+  margin: 100px auto;
+  max-width: 600px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.container.two-columns {
+  display: grid;
+  grid-template-columns: 700px 700px;
+  max-width: 1400px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.column {
+  max-width: 600px;
+}
+
+.player {
   align-items: center;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 50% 54px 54px 54px 54px;
+  padding: 10px 0;
+}
+
+.player:last-child {
+  border: none;
+}
+
+input {
+  color: #495057;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+input[type="text"] {
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 5px;
+  height: 54px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+input::placeholder {
+  color: #adb5bd;
+}
+
+.rank {
+  align-items: center;
+  background-color: #dee2e6;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  height: 54px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 54px;
 }
 
-.App-link {
-  color: #61dafb;
+.rank:focus {
+  background-color: #b2f2bb;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.rank.selected {
+  background-color: #69db7c;
+}
+
+.rank.average {
+  background-color: #e7f5ff;
+  color: #4dabf7;
+  font-weight: 700;
+}
+
+input[type="number"] {
+  background-color: #f1f3f5;
+  border: 1px solid #f1f3f5;
+  border-radius: 36px;
+  height: 36px;
+  text-align: center;
+  width: 36px;
+}
+
+input[type="number"]:focus {
+  outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.submit,
+.update {
+  font-size: 16px;
+}
+
+.update {
+  visibility: hidden;
+}
+
+.update.pending {
+  animation: pulse 2s infinite;
+  background-color: #fff3bf;
+  color: #fcc419;
+  visibility: visible;
+}
+
+.update.pending:hover {
+  background-color: #ffec99;
+  color: #fab005;
+}
+
+.submit:hover,
+.update:hover {
+  background-color: #dee2e6;
+  color: #212529;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
   }
-  to {
-    transform: rotate(360deg);
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
   }
 }
