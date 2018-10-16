@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import InputField from './InputField';
+import Input from './Input';
+import './Player.css';
 
 class Player extends Component {
   state = {
@@ -62,7 +63,7 @@ class Player extends Component {
 
     return (
       <div className="player">
-        <InputField
+        <Input
           name="name"
           fieldType="text"
           onChange={this.onChange}
@@ -77,7 +78,7 @@ class Player extends Component {
           role="button"
           tabIndex={0}
         >
-          <InputField
+          <Input
             name="rank1"
             fieldType="number"
             onChange={this.onChange}
@@ -93,7 +94,7 @@ class Player extends Component {
           role="button"
           tabIndex={0}
         >
-          <InputField
+          <Input
             name="rank2"
             fieldType="number"
             onChange={this.onChange}
@@ -101,9 +102,9 @@ class Player extends Component {
             placeholder="0"
           />
         </div>
-        <div className="rank average">{(Number(rank1) + Number(rank2)) / 2}</div>
+        <div className="average">{(Number(rank1) + Number(rank2)) / 2}</div>
         <div
-          className={pendingUpdate ? 'rank update pending' : 'rank update'}
+          className={pendingUpdate ? 'update pending' : 'update'}
           onClick={this.onUpdate}
           onKeyPress={this.onUpdate}
           role="button"

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import InputField from './InputField';
+import Input from './Input';
+import './AddPlayer.css';
 
 class AddPlayer extends Component {
   state = {
@@ -32,7 +33,7 @@ class AddPlayer extends Component {
     const { name } = this.state;
     return (
       <div className="player">
-        <InputField
+        <Input
           name="name"
           fieldType="text"
           onChange={this.onChange}
@@ -40,7 +41,7 @@ class AddPlayer extends Component {
           placeholder="Name..."
         />
         <div
-          className="rank submit"
+          className="submit"
           onClick={this.addPlayer}
           onKeyPress={this.addPlayer}
           role="button"

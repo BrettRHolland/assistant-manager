@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Input.css';
 
-const InputField = (props) => {
+const Input = (props) => {
   const {
     name, fieldType, value, placeholder, onChange,
   } = props;
@@ -18,7 +19,7 @@ const InputField = (props) => {
   );
 };
 
-InputField.propTypes = {
+Input.propTypes = {
   name: PropTypes.string.isRequired,
   fieldType: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
@@ -26,4 +27,4 @@ InputField.propTypes = {
   onChange: PropTypes.func.isRequired,
 };
 
-export default InputField;
+export default Input;
