@@ -1,25 +1,40 @@
 input {
   color: #495057;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 700;
 }
 
 input::placeholder {
-  color: #adb5bd;
+  color: #ced4da;
 }
 
-input[type='text'] {
-  background-color: #f8f9fa;
-  border: none;
-  border-radius: 5px;
+.add-player input[type="text"] {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px 0 #f1f3f5;
   height: 54px;
   padding: 0 10px;
   width: 100%;
 }
 
-input[type='text']:focus {
-  background-color: #f1f3f5;
+.add-player input[type="text"]:focus {
+  border: 1px solid #adb5bd;
+  outline: none;
+}
+
+.player input[type="text"] {
+  background-color: rgba(248, 249, 250, 0.5);
+  border: none;
+  border-radius: 3px;
+  height: 54px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.player input[type="text"]:focus {
+  background-color: rgba(248, 249, 250, 1);
   outline: none;
 }
 

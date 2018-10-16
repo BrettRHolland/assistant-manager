@@ -32,13 +32,13 @@ class AddPlayer extends Component {
   render() {
     const { name } = this.state;
     return (
-      <div className="player">
+      <div className="add-player">
         <Input
           name="name"
           fieldType="text"
           onChange={this.onChange}
           value={name}
-          placeholder="Name..."
+          placeholder="Type a player name here"
         />
         <div
           className="submit"

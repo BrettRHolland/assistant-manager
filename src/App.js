@@ -31,7 +31,6 @@ class App extends Component {
   updatePlayer = (updatedPlayer) => {
     const { players } = this.state;
 
-
     const foundPlayer = players.findIndex(x => x.id === updatedPlayer.id);
     players[foundPlayer] = updatedPlayer;
 
@@ -43,26 +42,24 @@ class App extends Component {
   render() {
     const { players } = this.state;
     return (
-      <div className="container">
-        <div className="column">
-          <AddPlayer onAddPlayerClick={this.addPlayer} />
-          <FlipMove duration="800">
-            {players
-              .sort((obj1, obj2) => (
-                (obj2.selectedRank !== undefined)
-                    - (obj1.selectedRank !== undefined)
-                  || obj1.selectedRank - obj2.selectedRank
-              ))
-              .map(player => (
-                <Player
-                  key={player.id}
-                  player={player}
-                  onPlayerChange={this.updatePlayer}
-                />
-              ))}
-          </FlipMove>
+      <React.Fragment>
+        <header>Assistant Manager</header>
+        <div className="container">
+          <div className="column">
+            <AddPlayer onAddPlayerClick={this.addPlayer} />
+            <FlipMove duration="800">
+              {players
+                .sort(
+                  (obj1, obj2) => (obj2.selectedRank !== undefined) - (obj1.selectedRank !== undefined)
+                    || obj1.selectedRank - obj2.selectedRank,
+                )
+                .map(player => (
+                  <Player key={player.id} player={player} onPlayerChange={this.updatePlayer} />
+                ))}
+            </FlipMove>
+          </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

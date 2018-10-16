@@ -1,6 +1,16 @@
+header {
+  border-bottom: 1px solid #dee2e6;
+  box-shadow: 0 1px 3px 0 #f1f3f5;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  padding: 20px;
+}
+
 .container {
-  margin: 100px auto;
-  max-width: 600px;
+  margin: 50px auto;
+  max-width: 700px;
+  padding: 0 20px;
 }
 
 .container.two-columns {
@@ -10,6 +20,5 @@
 }
 
 .column {
-  max-width: 600px;
+  max-width: 700px;
 }
-

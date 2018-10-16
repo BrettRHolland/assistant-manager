@@ -1,18 +1,29 @@
+.add-player {
+  align-items: center;
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: auto 27px 74px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
 .submit {
   align-items: center;
-  background-color: #f8f9fa;
+  background-color: #3b5bdb;
   border-radius: 50%;
+  color: #fff;
   cursor: pointer;
   display: flex;
   font-size: 16px;
   height: 54px;
   justify-content: center;
+  margin: 0 0 0 -27px;
   width: 54px;
 }
 
 .submit:hover,
 .submit:focus {
-  background-color: #dee2e6;
-  color: #212529;
+  background-color: #364fc7;
+  color: #fff;
   outline: none;
 }
