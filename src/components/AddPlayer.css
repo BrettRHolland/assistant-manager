@@ -19,6 +19,7 @@
   justify-content: center;
   margin: 0 0 0 -27px;
   width: 54px;
+  z-index: 100;
 }
 
 .submit:hover,
